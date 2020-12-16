@@ -22,11 +22,12 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        // khởi tạo class xử lý nhiệm vụ
         Exercise exercise2 = new Exercise();
 //        exercise2.sortWord();
-
+        // dùng scan để đọc từ bàn phím
         Scanner sc = new Scanner(System.in);
-
+        // biến lựa chọn chức năng
         int option = -1;
 
         do {
@@ -34,11 +35,11 @@ public class Main {
                     + "\n 2: Sắp xếp các từ dựa vào số lần xuất hiện. \n 3: Tìm kiếm các từ dựa vào các chữ cái đầu tiên."
                     + " \n 4: Nhập 0 để kết thúc chương trình"
             );
-
             option = sc.nextInt();
             switch (option) {
 
                 case 1: {
+                    // chức năng hiển thị thông tin từ file
                     HashMap<String, Integer> hMap = exercise2.countWord();
                     Set<String> keySet = hMap.keySet();
                     for (String key : keySet) {
@@ -48,6 +49,7 @@ public class Main {
                     break;
                 }
                 case 2: {
+                    // chứ năng sắp xếp
                     ArrayList<HashMap.Entry<String, Integer>> listWords = exercise2.sortWord();
 
                     for (int i = 0; i < listWords.size(); i++) {
@@ -57,6 +59,7 @@ public class Main {
                     break;
                 }
                 case 3: {
+                    // chức năng tìm kiếm
                     sc.nextLine();
                     String keyword = "";
                     do {
