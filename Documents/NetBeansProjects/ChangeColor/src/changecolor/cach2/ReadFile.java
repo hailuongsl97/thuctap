@@ -20,6 +20,7 @@ public class ReadFile {
         String content=null;
         int count=0;
         try {
+              // test
             int size=0;
             //Define a byte buffer, the size of the buffer is defined as needed
             byte[] buffer=new byte[1024];
